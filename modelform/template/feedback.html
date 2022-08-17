@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align = "center">Welcome to Feedback form </h1>
+
+<div class = "container" align="center">
+   <form class=""  method="POST">
+       {{forms.as_p}}
+       {% csrf_token %}
+       <input type="submit" class="btn btn-primary" name="" value="submit">
+   </form>
+
+</div>
+</body>
+</html>

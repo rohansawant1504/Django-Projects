@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+{%block base_block%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align="center">Update Student Form</h1>
+<hr>
+<div class="container" align="center">
+    <form method="POST">
+
+    student Roll-No : <input type="text" name="Roll_No" value="{{data.Roll_No}}">
+        <p></p>
+    student Name : <input type="text" name="Student_Name" value="{{data.Student_Name}}">
+        <p></p>
+    student Address : <input type="text" name="Address" value="{{data.Address}}">
+        <p></p>
+    student Email   : <input type="text" name="Email" value="{{data.Email}}">
+        <p></p>
+    student Date_of_admission : <input type="text" name="Date_of_admission" value="{{data.Date_of_admission}}">
+        <p></p>
+<!--    student Record  : <input type="text" name="Record" value="{{data.Record}}">-->
+<!--        <p></p>-->
+    {%csrf_token%}
+    <input type="submit" class="btn btn-success btn-lg" value="Update Record">
+        </form>
+    </div>
+{%endblock%}
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'loanapp/base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block base_block %}
+<div class="jambotron">
+<div class="container" align="center">
+    <h1>Welcome to Login</h1>
+    <form method="post">
+        {{form.as_p}}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+</div>
+</div>
+{%endblock%}
+</body>
+</html>

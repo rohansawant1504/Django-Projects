@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+{%block base_block%}
+<style>
+    table,th,td{
+    border : 1px solid black;
+    border-collapse: collapse;
+    }
+    th,td{
+padding:5 px;
+text-align :center;
+}
+</style>
+
+
+<body>
+<h1>Student Data</h1>
+<table border="3">
+    <thead>
+    <th>Roll_No</th>
+    <th>Student_Name</th>
+    <th>Address</th>
+    <th>Email</th>
+    <th>Date_of_admission</th>
+<!--    <th>Record</th>-->
+    </thead>
+    {%for emp in data%}
+    <tr>
+        <td>{{emp.Roll_No}}</td>
+        <td>{{emp.Student_Name}}</td>
+        <td>{{emp.Address}}</td>
+        <td>{{emp.Email}}</td>
+        <td>{{emp.Date_of_admission}}</td>
+<!--        <td>{{emp.Record}}</td>-->
+        <td><a href="update/{{emp.Roll_No}}"> Update</a> <a href="delete/{{emp.Roll_No}}">Delete</a></td>
+    </tr>
+{%endfor%}
+</table><br><br>
+<a href="/create" class="btn btn-primary btn-lg">Insert New Student Record</a>
+{%endblock%}
+</body>
+</html>
